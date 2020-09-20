@@ -16,3 +16,17 @@ Route::get('/unused', function () {
 });
 Route::get('/', 'Maincontroller@home');
 Route::get('/wishlist', 'Maincontroller@wishlist');
+Route::get('/manage', 'Maincontroller@managements');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/wishposts/list', 'WishPostController@listit');
+Route::get('/wishposts', 'WishPostController@index');
+Route::get('/wishposts/create', 'WishPostController@create');
+Route::post('/wishposts', 'WishPostController@store');
+Route::get('/wishposts/{wishpost}', 'WishPostController@show');
+Route::get('/wishposts/{wishpost}/edit', 'WishPostController@edit');
+Route::patch('/wishposts/{wishpost}', 'WishPostController@update');
+Route::delete('/wishposts/{wishpost}', 'WishPostController@destroy');
+

@@ -17,6 +17,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/wishlist">Wishlist <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/manage">Manage <span class="sr-only">(current)</span></a>
+            </li>
         </ul>
     </div>
 </nav>

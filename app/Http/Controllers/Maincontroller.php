@@ -12,6 +12,11 @@ class Maincontroller extends Controller
     }
     public function wishlist()
     {
-        return view('wishlist');
+        $list = \App\Wish::all();
+        return view('wishlist', compact('list'));
+    }
+    public function managements()
+    {
+        return view('managing');
     }
 }
