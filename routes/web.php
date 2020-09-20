@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/unused', function () {
     return view('welcome');
 });
+Route::get('/', 'Maincontroller@home');
+Route::get('/wishlist', 'Maincontroller@wishlist');
