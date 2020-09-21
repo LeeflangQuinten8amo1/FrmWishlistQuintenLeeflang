@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@auth
 @section('content')
 <h1>Wishposts</h1>
 <a href="/wishposts/create">Create new post</a>
@@ -8,3 +9,7 @@
 <p>No posts</p>
 @endforelse
 @endsection
+@endauth
+@guest
+    <h1>Insufficient access</h1>
+@endguest

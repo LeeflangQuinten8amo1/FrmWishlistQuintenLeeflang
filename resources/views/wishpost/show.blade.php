@@ -1,20 +1,19 @@
 @extends('layouts.app')
 @section('content')
-<h1>Details of post!</h1>
+<h1>Details Wens!</h1>
 <div>
     <a href="/wishposts">Back</a>
 </div>
 
-<strong>Name</strong>
+<strong>Naam</strong>
 <p>{{ $wishpost->name }}</p>
-<strong>Price</strong>
-<p>{{ $wishpost->price }}</p>
-<strong>Description</strong>
+<a href="{{ $wishpost->link }}">
+    <p><strong>€</strong> {{ $wishpost->price }}</p></a>
+<strong>Beschrijving</strong>
 <p>{{ $wishpost->description }}</p>
-<strong>ImageName</strong>
+<strong>ImageNaam</strong>
 <p>{{ $wishpost->imagename }}</p>
-<strong>link</strong>
-<p>{{ $wishpost->link }}</p>
+@auth
 <div>
     <a href="/wishposts/{{ $wishpost->id }}/edit">Edit</a>
     <form action="/wishposts/{{ $wishpost->id }}" method="post">
@@ -23,4 +22,5 @@
         <button>DELETE</button>
     </form>
 </div>
+@endauth
 @endsection

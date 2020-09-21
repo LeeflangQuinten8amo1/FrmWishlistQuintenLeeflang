@@ -29,4 +29,5 @@ Route::get('/wishposts/{wishpost}', 'WishPostController@show');
 Route::get('/wishposts/{wishpost}/edit', 'WishPostController@edit');
 Route::patch('/wishposts/{wishpost}', 'WishPostController@update');
 Route::delete('/wishposts/{wishpost}', 'WishPostController@destroy');
+Route::get('/wishlist', 'WishPostController@listit');
 
